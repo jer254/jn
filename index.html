@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" type="image/ico" href="./images/logo.ico">
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png"> -->
+<link rel="manifest" href="/site.webmanifest">
+<script src="./js/pdf.js"></script>
+  <link rel="stylesheet" href="./styles/pdf_viewer.css">
+  <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  
+    <title>JN | Portfolio</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "w1RRjqo5hSiNiZtnN",
+      });
+   })();
+</script>
+<style>
+  .shape{border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  height:500px;
+  width: 500px;
+  
+  }
+ 
+</style>
+</head>
+<body >
+<header class="shadow-2xl sticky top-0 z-10 bg-cyan-950">
+  <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center">
+              <img src="./images/logo.png" alt="Logo" class="h-10 w-10 rounded-md">
+          </div>
+
+          <!-- Center Navigation Links -->
+          <div class="hidden md:flex space-x-8">
+              <a href="#home" class="rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-fuchsia-300">Home</a>
+              <a href="#about" class="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-fuchsia-300">About</a>
+              <a href="#project" class="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-fuchsia-300">Projects</a>
+              <a href="#contact" class="rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-fuchsia-300">Contact</a>
+          </div>
+
+          <!-- Rounded Button -->
+          <div class="hidden md:flex">
+              <button class="px-4 py-2 bg-blue-600 rounded-full text-white hover:bg-blue-500"><a href="https://github.com/jer254" target="_blank">Github Profile</a></button>
+          </div>
+
+          <!-- Mobile Menu Icon -->
+          <div class="md:hidden">
+              <button id="menu-toggle" class="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                  </svg>
+              </button>
+          </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+              <a href="#home" class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700 hover:text-gray-300">Home</a>
+              <a href="#about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+              <a href="#project" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+              <button class="w-full mt-4 px-4 py-2 bg-blue-600 rounded-full text-white hover:bg-blue-500"><a href="https://github.com/jer254" target="_blank">Github Profile</a></button>
+          </div>
+      </div>
+  </nav>
+
+  <script>
+      // Toggle Mobile Menu
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+      });
+  </script>
+</header>
+
+    <section class="pt-2 h-screen bg-[#283618] bg-slate-950 dark:bg-gray-900 md:pt-0 sm:pt-16 2xl:pt-16 relative " id="home">
+                  <div class="flex items-center justify-center h-screen px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-4xl">
+                      <p class="font-normal leading-tight text-black dark:text-gray-300 text-xl sm:text-2xl lg:text-4xl">
+                        Hello 👋, I am
+                      </p>
+                      <br class="block sm:hidden" />
+                      <h2 class="font-extrabold text-transparent text-4xl sm:text-6xl lg:text-8xl bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600 uppercase">
+                        Jeremiah Ndegwa
+                      </h2>
+                      <p class="max-w-lg mx-auto text-lg sm:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mt-6 mb-8">
+                        <span class="text-3xl">&raquo;</span>  
+                        <span id="typewriter" class="text-xl text-cyan-700 font-bold"></span>
+                      </p>
+                      <div class="flex justify-center gap-4 mt-4">
+                        <button class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded">
+                         <a href="#contact">Get in Touch</a> 
+                        </button>
+                        <button id="view-cv" class="bg-transparent hover:bg-fuchsia-600 text-fuchsia-600 font-semibold py-2 px-4 border border-fuchsia-600 hover:text-white hover:border-transparent rounded">
+                          View Resume
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  
+    
+        </section>
+        
+      
+        <section class="bg-gray-900 px-4 py-8 sm:py-12 text-white" id="about">
+          <div id="container" class="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- About Me Section -->
+            <div class="bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-lg shadow-fuchsia-600 flex flex-col justify-between">
+              <div>
+                <p class="text-fuchsia-500 font-semibold text-sm sm:text-base">ABOUT</p>
+                <h1 class="font-bold text-2xl sm:text-3xl lg:text-4xl mt-3 mb-6">
+                  Coding Ninja🥷 by Day, Debugging Wizard🪄 by Night.
+                </h1>
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed mb-6">
+                  I am a software developer with a Bachelor's degree in Computer Science from Kabarak University. I work as an IT instructor at Kenya Methodist University TI. My skills include web development, graphic design, and data science. Outside of work, I stay updated on tech trends, explore design, and analyze data to gain insights.
+                </p>
+              </div>
+              <div id="social" class="flex flex-wrap justify-start items-center gap-4 mt-4">
+                <a rel="noopener" target="_blank" href="https://github.com/jer254" 
+                   class="bg-gradient-to-r from-fuchsia-600 to-blue-600 rounded-lg p-4 flex items-center gap-2 w-full sm:w-auto lg:w-64">
+                  <img src="https://ucarecdn.com/1f465c47-4849-4935-91f4-29135d8607af/github2.svg" alt="Github" width="20px" height="20px" />
+                  <span>Visit my Github &rarr;</span>
+                </a>
+                <a rel="noopener" target="_blank" href="https://www.linkedin.com/in/jeremiah-ndegwa-144b9b1b4" 
+                   class="bg-gradient-to-r from-fuchsia-600 to-blue-600 rounded-lg p-4 flex items-center gap-2 w-full sm:w-auto lg:w-64">
+                  <img src="https://ucarecdn.com/95eebb9c-85cf-4d12-942f-3c40d7044dc6/linkedin.svg" alt="LinkedIn" width="20px" height="20px" />
+                  <span>Follow me on LinkedIn &rarr;</span>
+                </a>
+                <a rel="noopener" target="_blank" href="https://x.com/ndegwa_jeremiah" 
+                   class="bg-gradient-to-r from-fuchsia-600 to-blue-600 rounded-lg p-4 flex items-center gap-2 w-full sm:w-auto lg:w-64">
+                  <img src="https://ucarecdn.com/82d7ca0a-c380-44c4-ba24-658723e2ab07/" alt="Twitter" width="20px" height="20px" />
+                  <span>Follow me on Twitter &rarr;</span>
+                </a>
+              </div>
+            </div>
+        
+            <!-- Profile Image -->
+            <div class="w-full flex justify-center">
+              <img src="./images/jn1.jpg" alt="Profile" 
+                   class="max-w-sm sm:max-w-md lg:max-w-2xl rounded-lg  grayscale md:grayscale hover:grayscale-0">
+            </div>
+          </div>
+        
+          <!-- Tools & Frameworks, Services, Languages, Collaboration Tools -->
+          <div class="w-full max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+            <!-- Tools & Frameworks -->
+            <div class="bg-gray-800 rounded-lg p-5 shadow-lg shadow-fuchsia-600">
+              <h2 class="text-xl font-bold text-left">Tools & Frameworks</h2>
+              <ul class="text-left mt-4 space-y-2 text-sm sm:text-base">
+                <li>&#10174; VS Code</li>
+                <li>&#10174; Figma</li>
+                <li>&#10174; Adobe Illustrator</li>
+                <li>&#10174; NodeJS</li>
+                <li>&#10174; ReactJS</li>
+                <li>&#10174; TailwindCSS</li>
+                <li>&#10174; Bootstrap</li>
+                <li>&#10174; GraphQL</li>
+              </ul>
+            </div>
+        
+            <!-- Services -->
+            <div class="bg-gray-800 rounded-lg p-5 shadow-lg shadow-fuchsia-600">
+              <h2 class="text-xl font-bold text-left">Services</h2>
+              <ul class="text-left mt-4 space-y-2 text-sm sm:text-base">
+                <li>&#10174; Frontend Development</li>
+                <li>&#10174; Graphic Design</li>
+                <li>&#10174; Bootcamp Trainings</li>
+              </ul>
+            </div>
+        
+            <!-- Languages -->
+            <div class="bg-gray-800 rounded-lg p-5 shadow-lg shadow-fuchsia-600">
+              <h2 class="text-xl font-bold text-left">Languages</h2>
+              <ul class="text-left mt-4 space-y-2 text-sm sm:text-base">
+                <li>&#10174; HTML</li>
+                <li>&#10174; CSS</li>
+                <li>&#10174; Vanilla JavaScript</li>
+                <li>&#10174; Python</li>
+                <li>&#10174; PHP</li>
+              </ul>
+            </div>
+        
+            <!-- Collaboration Tools -->
+            <div class="bg-gray-800 rounded-lg p-5 shadow-lg shadow-fuchsia-600">
+              <h2 class="text-xl font-bold text-left">Collaboration Tools</h2>
+              <ul class="text-left mt-4 space-y-2 text-sm sm:text-base">
+                <li>&#10174; Git</li>
+                <li>&#10174; Slack</li>
+                <li>&#10174; Discord</li>
+                <li>&#10174; AnyDesk</li>
+                <li>&#10174; Jira</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
+    </section>
+
+    <section class="py-12 bg-gray-900 text-gray-100 sm:py-12 lg:py-16" id="project">
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div class="max-w-xl mx-auto text-center xl:max-w-2xl">
+                    <h1 class="heading text-white">PROJECTS</h1>
+              <h2 class="text-3xl font-bold leading-tight  sm:text-4xl xl:text-5xl mb-6 text-fuchsia-300">Explore my featured works</h2>
+              <p class="mb-4">My projects makes use of a variety of latest technology tools. My best moments are building and deploying  web applications using cloud infrastructure.</p>
+  
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Portfolio Card -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up">
+                <h3 class="text-xl font-bold mb-2">My Portfolio</h3>
+                <p class="mb-4">A showcase of my work built with HTML, CSS, and JavaScript.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-blue-600 text-white rounded-full text-sm">HTML</span>
+                    <span class="px-3 py-1 bg-green-600 text-white rounded-full text-sm">Tailwind CSS</span>
+                    <span class="px-3 py-1 bg-yellow-500 text-white rounded-full text-sm">JavaScript</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                        <!-- <i class="fas fa-globe fa-lg"></i> -->
+                        <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    <a href="https://github.com/jer254" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                        <i class="fa fa-github-square text-3xl"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Realtime Collaboration Tool -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl font-bold mb-2">Realtime Collaboration Tool</h3>
+                <p class="mb-4">Collaborative editing tool for live updates and teamwork.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-red-600 text-white rounded-full text-sm">Node.js</span>
+                    <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-sm">Socket.IO</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                      <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                      <i class="fa fa-github-square text-3xl"></i>
+                      <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- History Tracker -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl font-bold mb-2">Version History Tracker</h3>
+                <p class="mb-4">Track and manage version history for your projects seamlessly.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-purple-600 text-white rounded-full text-sm">React</span>
+                    <span class="px-3 py-1 bg-pink-600 text-white rounded-full text-sm">Firebase</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                      <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                      <i class="fa fa-github-square text-3xl"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Integration Tool -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl font-bold mb-2">Integration Tool</h3>
+                <p class="mb-4">Streamline your workflow with integrations like Slack and Jira.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-teal-600 text-white rounded-full text-sm">Slack</span>
+                    <span class="px-3 py-1 bg-orange-500 text-white rounded-full text-sm">Jira</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                      <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                      <i class="fa fa-github-square text-3xl"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Data Visualization Dashboard -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl font-bold mb-2">Data Visualization Dashboard</h3>
+                <p class="mb-4">Interactive dashboards to analyze data effectively.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-indigo-600 text-white rounded-full text-sm">D3.js</span>
+                    <span class="px-3 py-1 bg-cyan-600 text-white rounded-full text-sm">Chart.js</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                      <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                      <i class="fa fa-github-square text-3xl"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Blogging Platform -->
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-xl font-bold mb-2">Custom Blogging Platform</h3>
+                <p class="mb-4">A personalized platform for sharing blogs and articles.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-yellow-600 text-white rounded-full text-sm">PHP</span>
+                    <span class="px-3 py-1 bg-gray-500 text-white rounded-full text-sm">MySQL</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-blue-500 transition">
+                        <i class="fa fa-bullseye text-3xl" title="view live"></i>
+                        
+                        <span class="sr-only">View Live</span>
+                    </a>
+                    
+                    <a href="#" target="_blank" class="text-gray-300 hover:text-purple-500 transition">
+                      <i class="fa fa-github-square text-3xl" title="view in github"></i>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                </div>
+            </div>
+                </div>
+  </section>
+
+       <section class="body-font relative bg-gray-900 text-gray-400" id="contact">
+
+        <div class="container mx-auto px-5 py-24">
+          
+          <div class="mb-12 flex w-full flex-col text-center">
+            <h1 class="heading text-white">Get in Touch</h1>
+            <p class="mx-auto text-base leading-relaxed lg:w-2/3">Feel free to reach out to, Whether you have a question,
+              feedback, or a collaboration proposal.
+            </p>
+          </div>
+      
+          <div class="mx-auto md:w-2/3 lg:w-1/2">
+            <div class="-m-2 flex flex-wrap">
+      
+              <!-- form -->
+              <form id="contact-form" class="-m-2 flex flex-wrap">
+              <div class="w-1/2 p-2">
+                <div class="relative">
+                  <input type="text" id="fname" name="fname" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="First Name" />
+                  <label for="name" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">First Name</label>
+                </div>
+              </div>
+              <div class="w-1/2 p-2">
+                <div class="relative">
+                  <input type="text" id="lname" name="lname" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="First Name" />
+                  <label for="name" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Last Name</label>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <div class="relative">
+                  <input type="email" id="email" name="email" class="peer w-full rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-8 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="Email" />
+                  <label for="email" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Email</label>
+                </div>
+              </div>
+              <div class="mt-4 w-full p-2">
+                <div class="relative">
+                  <textarea id="message" name="message" class="peer h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 bg-opacity-40 py-1 px-3 text-base leading-6 text-gray-100 placeholder-transparent outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="Message"></textarea>
+                  <label for="message" class="absolute left-3 -top-6 bg-transparent text-sm leading-7 text-indigo-500 transition-all peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Message</label>
+                </div>
+              </div>
+              <div class="w-full p-2">
+                <button type="submit" class=" w-full flex justify-center border-0 bg-indigo-500 py-2 px-8 text-lg text-white hover:bg-indigo-600 focus:outline-none">Send</button>
+              </div>
+              </form>
+      
+      
+              <!-- footer -->
+              <div class="mt-8 w-full border-t border-gray-800 p-2 pt-8 text-center">
+                <a class="text-indigo-400">ndegwajeremiah8842@gmail.com</a>
+                <p class="my-5 leading-normal">Kisauni<br />Mombasa, Kenya</p>
+                <span class="inline-flex">
+                  <a class="text-gray-500 hover:text-white " >
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="h-5 w-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 hover:text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="h-5 w-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 hover:text-white">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="h-5 w-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500 hover:text-white">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="h-5 w-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span>
+               <p class="mt-8"> © 2024 Copyright:
+                <a href="#">Jeremiah Ndegwa</a></p>
+              </div>
+      
+            </div>
+          </div>
+      
+        </div>
+        
+      </section>
+  
+</main>
+<!--Footer container-->
+
+<script src="./js/index.js"></script> 
+
+<script src="./node_modules/aos/dist/aos.js"></script>
+
+</body>
+</html>
